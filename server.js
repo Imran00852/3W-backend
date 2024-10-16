@@ -11,9 +11,10 @@ if (process.env.NODE_ENV != "production") {
 }
 //cors
 app.use(cors({
-  origin: [process.env.FRONTEND_URL],
+  origin: "*",
   methods: ["GET", "POST"],
 }))
+
 
 //connect db
 connectDB();
