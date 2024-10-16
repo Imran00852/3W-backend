@@ -11,7 +11,7 @@ if (process.env.NODE_ENV != "production") {
 }
 //cors
 app.use(cors({
-  origin: "*",
+  origin: [process.env.FRONTEND_URL],
   methods: ["GET", "POST"],
 }))
 
