@@ -22,6 +22,7 @@ app.use(cors({
 connectDB();
 
 //middleware to read form data
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //routes
